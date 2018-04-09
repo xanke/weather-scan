@@ -21,12 +21,14 @@
     "clean": "ets clean"
   },
   "dependencies": {
+    "cheerio": "^1.0.0-rc.2",
     "egg": "^2.6.0",
     "egg-scripts": "^2.6.0",
     "egg-sequelize": "^3.1.2",
     "egg-validate": "^1.0.0",
     "moment": "^2.22.0",
-    "mysql2": "^1.5.3"
+    "mysql2": "^1.5.3",
+    "superagent": "^3.8.2"
   },
   "devDependencies": {
     "@types/mocha": "^2.2.40",
