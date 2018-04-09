@@ -1,6 +1,11 @@
 'use strict'
 
-exports.sequelize = {
+// exports.sequelize = {
+//   enable: true,
+//   package: 'egg-sequelize'
+// }
+
+exports.mongoose = {
   enable: true,
-  package: 'egg-sequelize'
+  package: 'egg-mongoose'
 }

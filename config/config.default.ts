@@ -17,7 +17,11 @@ export interface BizConfig {
     username: string
     password: string
     timezone: string
+  },
+  mongoose: {
+    url: string
   }
+
 }
 
 export default (appInfo: EggAppConfig) => {
@@ -33,11 +37,9 @@ export default (appInfo: EggAppConfig) => {
     timezone: '+08:00'
   }
 
-  // app special config
-  config.sourceUrl = `https://github.com/eggjs/examples/tree/master/${
-    appInfo.name
-  }`
-
+  config.mongoose = {
+    url: ''
+  }
   // override config from framework / plugin
   // use for cookie sign key, should change to your own and keep security
   config.keys = appInfo.name + '_1523272516585_8244'
