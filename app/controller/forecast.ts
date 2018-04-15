@@ -6,7 +6,6 @@ export default class ForecastController extends Controller {
     const { city } = ctx.params
 
     let data = await ctx.service.weather.getCity(city)
-
     if (data) {
       const time = Date.now() - data.utime
       // 大于一小时则采集

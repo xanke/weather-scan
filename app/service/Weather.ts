@@ -18,12 +18,7 @@ export default class Weather extends Service {
         _id: 0
       }
     ).sort({ utime: -1 })
-
-    if (data && data.list) {
-      return data.list
-    } else {
-      return false
-    }
+    return data
   }
 
   public async getSinaByCity(city: string) {
