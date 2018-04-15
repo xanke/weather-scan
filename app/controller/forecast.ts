@@ -11,6 +11,8 @@ export default class ForecastController extends Controller {
       // 大于一小时则采集
       if (time > 60000 * 60) {
         data = await ctx.service.weather.getSinaByCity(city)
+      } else {
+        data = data.list
       }
     } else {
       data = await ctx.service.weather.getSinaByCity(city)
