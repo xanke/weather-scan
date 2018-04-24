@@ -27,7 +27,7 @@ export default class Weather extends Service {
     const $ = cheerio.load(data.text)
 
     const list: any[] = []
-    const today = moment().format('YYYY-MM-DD')
+    // const today = moment().format('YYYY-MM-DD')
 
     $('.blk_fc_c0_i').each((index, item) => {
       let $item = $(item)
@@ -68,20 +68,18 @@ export default class Weather extends Service {
       let [wd, ws] = wdText
       const [min, max] = teaTeam
 
-      if (date !== today) {
-        const create = {
-          aqi,
-          wea,
-          ws,
-          wd,
-          max,
-          min,
-          date,
-          city,
-        }
-
-        list.push(create)
+      const create = {
+        aqi,
+        wea,
+        ws,
+        wd,
+        max,
+        min,
+        date,
+        city
       }
+
+      list.push(create)
     })
 
     await ctx.model.Forecast.create({
