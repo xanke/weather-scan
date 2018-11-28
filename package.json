@@ -7,8 +7,9 @@
     "typescript": true
   },
   "scripts": {
-    "start": "egg-scripts start --daemon --title=egg-server-weather",
-    "stop": "egg-scripts stop --title=egg-server-weather",
+    "start": "egg-scripts start --daemon --title=weather-service",
+    "docker": "egg-scripts start --port=80 --title=weather-service",
+    "stop": "egg-scripts stop --title=weather-service",
     "dev": "egg-bin dev -r egg-ts-helper/register",
     "debug": "egg-bin debug -r egg-ts-helper/register",
     "test-local": "egg-bin test -r egg-ts-helper/register",
